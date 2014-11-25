@@ -1,3 +1,24 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' class="container">
+  <ul ng-controller='LinksController' ng-init='getLinks()'>
+    <div class="search-bar row">
+      <input class="title pull-right" ng-model='search' placeholder="Search Me"></input>
+    </div>
+    <div class="row header-row">
+      <div class="col-md-6 text-center">Site</div>
+      <div class="col-md-4 text-center">Short URL</div>
+      <div class="col-md-2 text-center">Visits</div>
+    </div>
+    <li ng-repeat="link in data | filter:search | orderObjectBy:'visits':true" class="row list-unstyled clean">
+        <div class="col-md-6">
+          <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+          <a href="{{ link.url }}" class="no-underline">{{ link.title }}</a>
+        </div>
+        <div class="col-md-4 text-center" ng-click="openLink(link.code)">
+          <a class="shortlink">shortly/{{ link.code }}</a>
+        </div>
+        <div class="col-md-2 text-center">
+          {{link.visits}}
+        </div>
+    </li>
+  </ul>
 </div>

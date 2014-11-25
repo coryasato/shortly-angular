@@ -4,9 +4,23 @@
     <meta charset="utf-8" />
     <title>Shortly</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
   </head>
   <body>
-    <h1>Shortly</h1>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <span class="glyphicon glyphicon-cloud">
+            Short.ly
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+        <li><a href="/#/links">My Links</a></li>
+        <li><a href="/#/shorten">Shorten a link</a></li>
+        </ul>
+      </div>
+    </nav>
 
     <!-- the ng-view directive is where our templates will be loaded into when naviagted to -->
     <div ng-view></div>

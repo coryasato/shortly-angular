@@ -23,3 +23,10 @@ LinkSchema.pre('save', function(next){
 });
 
 module.exports = mongoose.model('Link', LinkSchema);
+
+//visits: 2
+//link: http://www.google.com
+//title: User title
+//code: SHA'd url
+//base_url: ?
+//url True URL

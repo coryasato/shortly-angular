@@ -1,6 +1,17 @@
-<div id='container'>
-<!-- Your code here -->
-
+<div class="container" id='container' ng-controller="ShortenController">
+  <div class="row">
+    <div class=""></div>
+    <div class="col-xs-12">
+      <form name="linkForm" class="row" ng-submit="addLink(myLink)" novalidate>
+        <div class="form-group">
+        <input class="pull-left" type="url" name="link" ng-model="myLink" placeholder="Enter your URL here!"/>
+          <button class="btn btn-default" type="submit" ng-disabled="linkForm.$invalid">POST!</button>
+        <span class="alert alert-danger" role="alert" ng-show="linkForm.link.$invalid">Use a real url dude</span>
+          {{link}}
+        </div>
+      </form>
+    </div>
+  </div>
 </div>
 
 

@@ -10,6 +10,10 @@ a {
   text-decoration: none;
 }
 
+.no-underline:hover {
+  text-decoration: none;
+}
+
 h1 {
   font-style: italic;
   margin-bottom: 10px;
@@ -121,9 +125,13 @@ input[type=url]:focus {
 }
 
 .clean {
-  border: #efe solid 2px;
+  border: #f8f8f8 solid 1px;
   padding: 10px;
   margin: 0 10px;
+}
+
+.clean:hover{
+  background-color: pink;
 }
 
 .creator {
@@ -146,3 +154,15 @@ input[type=url]:focus {
   clear: both;
 }
 
+.shortlink {
+  cursor: pointer;
+}
+
+.header-row {
+  padding-bottom: 15px;
+  font-weight: bold;
+}
+
+.search-bar {
+  padding: 50px;
+}
