@@ -166,3 +166,11 @@ input[type=url]:focus {
 .search-bar {
   padding: 50px;
 }
+
+.code-btn {
+  margin-left: 30px;
+}
+
+.shorten-container{
+  padding-top: 5%;
+}
