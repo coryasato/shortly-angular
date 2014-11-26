@@ -1,7 +1,6 @@
 angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, $window, Links) {
-  angular.extend('LinksController', Links);
 
   $scope.getLinks = function() {
     Links.getLinks()
@@ -9,7 +8,7 @@ angular.module('shortly.links', [])
         $scope.data = data;
       })
       .catch(function(err) {
-        conosole.log(err);
+        throw err;
       });
   };
 

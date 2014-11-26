@@ -35,22 +35,6 @@ angular.module('shortly', [
     // of interceptors. Think of it like middleware for your ajax calls
     $httpProvider.interceptors.push('AttachTokens');
 })
-.directive('urlCheck', function(){
-  return {
-    require: 'ngModel',
-    link: function(scope, elm, atrr, ctrl){
-      ctrl.$validators.urlCheck = function(modelValue, viewValue){
-        if (ctrl.$isEmpty(modelValue)){
-          return true;
-        }
-        if (viewValue.length < 5){
-          return false;
-        }
-        return false;
-      }
-    }
-  };
-})
 .factory('AttachTokens', function ($window) {
   // this is an $httpInterceptor
   // its job is to stop all out going request

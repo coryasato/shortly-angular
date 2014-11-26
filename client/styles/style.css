@@ -1,7 +1,7 @@
 body {
   margin: 0;
   margin-top: 10px;
-  font-family: arial, sans-serif;
+  font-family: "Helvetica-Neue", arial, sans-serif;
 }
 
 a {
@@ -10,13 +10,13 @@ a {
   text-decoration: none;
 }
 
-.no-underline:hover {
-  text-decoration: none;
-}
-
 h1 {
   font-style: italic;
   margin-bottom: 10px;
+}
+
+.no-underline:hover {
+  text-decoration: none;
 }
 
 .navigation {
